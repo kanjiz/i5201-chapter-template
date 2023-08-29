@@ -4,3 +4,28 @@
  * This is a general purpose Gradle build.
  * To learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.3/samples
  */
+plugins {
+  java
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+  testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
+  // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
+  testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.0")
+}
+
+tasks.withType<JavaCompile>().configureEach {
+  options.encoding = "UTF-8"
+}
+
+tasks.withType<Test>().configureEach {
+  useJUnitPlatform()
+  testLogging {
+    events("passed", "skipped", "failed")
+  }
+}
