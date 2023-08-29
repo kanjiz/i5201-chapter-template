@@ -5,14 +5,20 @@
 *.iws
 out/
 
+# Java class files
+*.class
+
 # Visual Studio Code
 .vscode/
-
-# Ignore Gradle build output directory
-build
 
 # Ignore VSCode build output directory
 bin/
 
-# Java class files
-*.class
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+
+
