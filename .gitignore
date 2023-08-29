@@ -16,3 +16,6 @@ bin/
 
 # Java class files
 *.class
+
+# Ignore Gradle project-specific cache directory
+.gradle
