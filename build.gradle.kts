@@ -17,6 +17,9 @@ dependencies {
   testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
   // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
   testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.0")
+  // https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher
+  testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
 }
 
 tasks.withType<JavaCompile>().configureEach {
