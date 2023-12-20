@@ -1,19 +1,28 @@
+# EditorConfigは、さまざまなエディターやIDE間で一貫したコーディングスタイルを保つための設定ファイルです。
 root = true
 
-# 全てのファイルに適用される設定
+# これらの設定はプロジェクト内のすべてのファイルに適用されます
 [*]
+# インデントにはスペースを使用します（タブではなく）
 indent_style = space
+# インデントの幅を2つのスペースに設定します
 indent_size = 2
+# 改行コードはLF（Unixスタイル）に設定します
 end_of_line = lf
+# 文字コードにはUTF-8を使用します
 charset = utf-8
-# 行末の空白をトリムする
+# 行末の空白文字を削除します
 trim_trailing_whitespace = true
-# ファイルの最終行に改行を挿入する
+# ファイルの最後には必ず改行を挿入します
 insert_final_newline = true
 
-# マークダウンファイルに適用される設定
+# これらの設定は、Markdownファイル用にデフォルト設定を上書きします
 [*.md]
-# インデントサイズを4に変更する
+# インデントの幅は4つのスペースに設定します（一般設定を上書き）
 indent_size = 4
-# 行末の空白をトリムしないように設定する
+# Markdownファイルでは行末のスペースを削除しません（Markdownではスペースが意味を持つことがあります）
 trim_trailing_whitespace = false
+
+# Batファイルでは改行コードをCRLF（Windowsスタイル）に設定します
+[*.bat]
+end_of_line = crlf

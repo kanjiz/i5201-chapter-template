@@ -1,9 +1,5 @@
-#
-# https://help.github.com/articles/dealing-with-line-endings/
-#
-# Linux start script should use lf
-/gradlew        text eol=lf
+# デフォルトでは、テキストファイルの改行コードをLF（Unixスタイル）に設定します
+* text=auto eol=lf
 
-# These are Windows script files and should use crlf
-*.bat           text eol=crlf
-
+# .bat ファイルだけは、改行コードをCRLF（Windowsスタイル）に設定します
+*.bat text eol=crlf
